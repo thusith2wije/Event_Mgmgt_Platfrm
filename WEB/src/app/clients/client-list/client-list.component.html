@@ -1,0 +1,16 @@
+<h4>List of Clients</h4>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let client of clientService.clientList">
+    <td>{{client.id}}</td>
+    <td>{{client.name}}</td>
+    <td>{{client.address}}</td>
+    <td>
+      <a class="btn" (click)="showForEdit(client)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(client.id)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>
